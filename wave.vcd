@@ -1,5 +1,5 @@
 $date
-	Sat Jul 18 17:52:36 2026
+	Sat Jul 18 23:46:59 2026
 $end
 $version
 	Icarus Verilog
@@ -7,13 +7,12 @@ $end
 $timescale
 	1s
 $end
-$scope module tb_full_adder $end
-$var wire 1 ! sum $end
+$scope module tb_ripple_adder $end
+$var wire 8 ! sum [7:0] $end
 $var wire 1 " cout $end
-$var reg 1 # a $end
-$var reg 1 $ b $end
+$var reg 8 # a [7:0] $end
+$var reg 8 $ b [7:0] $end
 $var reg 1 % cin $end
-$var integer 32 & i [31:0] $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
@@ -21,45 +20,25 @@ $dumpall
 $end
 #0
 $dumpvars
-b0 &
 0%
-0$
-0#
+b11 $
+b101 #
 0"
-0!
+b1000 !
 $end
 #10
-1!
-1$
-b1 &
+1"
+b0 !
+b1 $
+b11111111 #
 #20
-1#
-0$
-b10 &
-#30
-0!
-1"
-1$
-b11 &
-#40
 0"
-1!
+b10010110 !
+b110010 $
+b1100100 #
+#30
+b10000 !
 1%
-0#
-0$
-b100 &
-#50
-1"
-0!
-1$
-b101 &
-#60
-1#
-0$
-b110 &
-#70
-1!
-1$
-b111 &
-#80
-b1000 &
+b1000 $
+b111 #
+#40
