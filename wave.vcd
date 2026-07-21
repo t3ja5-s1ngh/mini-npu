@@ -1,5 +1,5 @@
 $date
-	Sat Jul 18 23:46:59 2026
+	Mon Jul 20 17:26:45 2026
 $end
 $version
 	Icarus Verilog
@@ -7,38 +7,805 @@ $end
 $timescale
 	1s
 $end
-$scope module tb_ripple_adder $end
-$var wire 8 ! sum [7:0] $end
-$var wire 1 " cout $end
-$var reg 8 # a [7:0] $end
-$var reg 8 $ b [7:0] $end
-$var reg 1 % cin $end
+$scope module tb_register $end
+$var wire 8 ! q [7:0] $end
+$var reg 1 " clk $end
+$var reg 8 # d [7:0] $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 8 $ d [7:0] $end
+$var wire 8 % q [7:0] $end
+$var parameter 32 & width $end
+$scope begin genblk1[0] $end
+$var parameter 2 ' i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 ( clk_n $end
+$var wire 1 ) d $end
+$var wire 1 * q_n $end
+$var wire 1 + q2 $end
+$var wire 1 , q1 $end
+$var wire 1 - q $end
+$scope module master $end
+$var wire 1 . a1 $end
+$var wire 1 / a2 $end
+$var wire 1 ( clk $end
+$var wire 1 ) d $end
+$var wire 1 0 d_n $end
+$var wire 1 , q $end
+$var wire 1 + q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 1 a1 $end
+$var wire 1 2 a2 $end
+$var wire 1 " clk $end
+$var wire 1 , d $end
+$var wire 1 3 d_n $end
+$var wire 1 - q $end
+$var wire 1 * q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[1] $end
+$var parameter 2 4 i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 5 clk_n $end
+$var wire 1 6 d $end
+$var wire 1 7 q_n $end
+$var wire 1 8 q2 $end
+$var wire 1 9 q1 $end
+$var wire 1 : q $end
+$scope module master $end
+$var wire 1 ; a1 $end
+$var wire 1 < a2 $end
+$var wire 1 5 clk $end
+$var wire 1 6 d $end
+$var wire 1 = d_n $end
+$var wire 1 9 q $end
+$var wire 1 8 q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 > a1 $end
+$var wire 1 ? a2 $end
+$var wire 1 " clk $end
+$var wire 1 9 d $end
+$var wire 1 @ d_n $end
+$var wire 1 : q $end
+$var wire 1 7 q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[2] $end
+$var parameter 3 A i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 B clk_n $end
+$var wire 1 C d $end
+$var wire 1 D q_n $end
+$var wire 1 E q2 $end
+$var wire 1 F q1 $end
+$var wire 1 G q $end
+$scope module master $end
+$var wire 1 H a1 $end
+$var wire 1 I a2 $end
+$var wire 1 B clk $end
+$var wire 1 C d $end
+$var wire 1 J d_n $end
+$var wire 1 F q $end
+$var wire 1 E q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 K a1 $end
+$var wire 1 L a2 $end
+$var wire 1 " clk $end
+$var wire 1 F d $end
+$var wire 1 M d_n $end
+$var wire 1 G q $end
+$var wire 1 D q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[3] $end
+$var parameter 3 N i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 O clk_n $end
+$var wire 1 P d $end
+$var wire 1 Q q_n $end
+$var wire 1 R q2 $end
+$var wire 1 S q1 $end
+$var wire 1 T q $end
+$scope module master $end
+$var wire 1 U a1 $end
+$var wire 1 V a2 $end
+$var wire 1 O clk $end
+$var wire 1 P d $end
+$var wire 1 W d_n $end
+$var wire 1 S q $end
+$var wire 1 R q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 X a1 $end
+$var wire 1 Y a2 $end
+$var wire 1 " clk $end
+$var wire 1 S d $end
+$var wire 1 Z d_n $end
+$var wire 1 T q $end
+$var wire 1 Q q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[4] $end
+$var parameter 4 [ i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 \ clk_n $end
+$var wire 1 ] d $end
+$var wire 1 ^ q_n $end
+$var wire 1 _ q2 $end
+$var wire 1 ` q1 $end
+$var wire 1 a q $end
+$scope module master $end
+$var wire 1 b a1 $end
+$var wire 1 c a2 $end
+$var wire 1 \ clk $end
+$var wire 1 ] d $end
+$var wire 1 d d_n $end
+$var wire 1 ` q $end
+$var wire 1 _ q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 e a1 $end
+$var wire 1 f a2 $end
+$var wire 1 " clk $end
+$var wire 1 ` d $end
+$var wire 1 g d_n $end
+$var wire 1 a q $end
+$var wire 1 ^ q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[5] $end
+$var parameter 4 h i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 i clk_n $end
+$var wire 1 j d $end
+$var wire 1 k q_n $end
+$var wire 1 l q2 $end
+$var wire 1 m q1 $end
+$var wire 1 n q $end
+$scope module master $end
+$var wire 1 o a1 $end
+$var wire 1 p a2 $end
+$var wire 1 i clk $end
+$var wire 1 j d $end
+$var wire 1 q d_n $end
+$var wire 1 m q $end
+$var wire 1 l q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 r a1 $end
+$var wire 1 s a2 $end
+$var wire 1 " clk $end
+$var wire 1 m d $end
+$var wire 1 t d_n $end
+$var wire 1 n q $end
+$var wire 1 k q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[6] $end
+$var parameter 4 u i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 v clk_n $end
+$var wire 1 w d $end
+$var wire 1 x q_n $end
+$var wire 1 y q2 $end
+$var wire 1 z q1 $end
+$var wire 1 { q $end
+$scope module master $end
+$var wire 1 | a1 $end
+$var wire 1 } a2 $end
+$var wire 1 v clk $end
+$var wire 1 w d $end
+$var wire 1 ~ d_n $end
+$var wire 1 z q $end
+$var wire 1 y q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 !" a1 $end
+$var wire 1 "" a2 $end
+$var wire 1 " clk $end
+$var wire 1 z d $end
+$var wire 1 #" d_n $end
+$var wire 1 { q $end
+$var wire 1 x q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[7] $end
+$var parameter 4 $" i $end
+$scope module flipflop $end
+$var wire 1 " clk $end
+$var wire 1 %" clk_n $end
+$var wire 1 &" d $end
+$var wire 1 '" q_n $end
+$var wire 1 (" q2 $end
+$var wire 1 )" q1 $end
+$var wire 1 *" q $end
+$scope module master $end
+$var wire 1 +" a1 $end
+$var wire 1 ," a2 $end
+$var wire 1 %" clk $end
+$var wire 1 &" d $end
+$var wire 1 -" d_n $end
+$var wire 1 )" q $end
+$var wire 1 (" q_n $end
+$upscope $end
+$scope module slave $end
+$var wire 1 ." a1 $end
+$var wire 1 /" a2 $end
+$var wire 1 " clk $end
+$var wire 1 )" d $end
+$var wire 1 0" d_n $end
+$var wire 1 *" q $end
+$var wire 1 '" q_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
+b111 $"
+b110 u
+b101 h
+b100 [
+b11 N
+b10 A
+b1 4
+b0 '
+b1000 &
 $end
 #0
 $dumpvars
-0%
-b11 $
-b101 #
+10"
+1/"
+1."
+1-"
+0,"
+1+"
+x*"
+0)"
+1("
+x'"
+0&"
+1%"
+1#"
+1""
+1!"
+1~
+0}
+1|
+x{
+0z
+1y
+xx
+0w
+1v
+1t
+1s
+1r
+1q
+0p
+1o
+xn
+0m
+1l
+xk
+0j
+1i
+1g
+1f
+1e
+1d
+0c
+1b
+xa
+0`
+1_
+x^
+0]
+1\
+1Z
+1Y
+1X
+1W
+0V
+1U
+xT
+0S
+1R
+xQ
+0P
+1O
+1M
+1L
+1K
+1J
+0I
+1H
+xG
+0F
+1E
+xD
+0C
+1B
+1@
+1?
+1>
+1=
+0<
+1;
+x:
+09
+18
+x7
+06
+15
+13
+12
+11
+10
+0/
+1.
+x-
+0,
+1+
+x*
+0)
+1(
+bx %
+b0 $
+b0 #
 0"
-b1000 !
+bx !
 $end
-#10
-1"
+#5
+0-
+0:
+0G
+0T
+0a
+0n
+0{
 b0 !
-b1 $
-b11111111 #
-#20
+b0 %
+0*"
+1/
+1*
+1<
+17
+1I
+1D
+1V
+1Q
+1c
+1^
+1p
+1k
+1}
+1x
+1,"
+1'"
+0(
+02
+05
+0?
+0B
+0L
+0O
+0Y
+0\
+0f
+0i
+0s
+0v
+0""
+0%"
+0/"
+1"
+#10
+08
+0@
+0R
+0Z
+0l
+0t
+0("
+00"
+19
+1S
+1m
+1)"
+0/
+0I
+0c
+0}
+0=
+0;
+0W
+0U
+0q
+0o
+0-"
+0+"
+1(
+12
+15
+1?
+1B
+1L
+1O
+1Y
+1\
+1f
+1i
+1s
+1v
+1""
+1%"
+1/"
+16
+1P
+1j
+1&"
 0"
-b10010110 !
-b110010 $
-b1100100 #
+b10101010 #
+b10101010 $
+#15
+07
+0Q
+0k
+0'"
+1/
+1;
+1:
+1I
+1U
+1T
+1c
+1o
+1n
+1}
+1+"
+b10101010 !
+b10101010 %
+1*"
+0(
+02
+05
+0>
+0B
+0L
+0O
+0X
+0\
+0f
+0i
+0r
+0v
+0""
+0%"
+0."
+1"
+#20
+1@
+1Z
+09
+0S
+0_
+0g
+0y
+0#"
+18
+1R
+1`
+1z
+0/
+0<
+0I
+0V
+0o
+0+"
+1=
+1W
+0d
+0b
+0~
+0|
+1(
+12
+15
+1>
+1B
+1L
+1O
+1X
+1\
+1f
+1i
+1r
+1v
+1""
+1%"
+1."
+06
+0P
+1]
+1w
+0"
+b11110000 #
+b11110000 $
+#25
+0:
+0T
+0^
+0x
+1/
+1<
+17
+1I
+1V
+1Q
+1b
+1a
+1o
+1|
+b11110000 !
+b11110000 %
+1{
+1+"
+0(
+02
+05
+0?
+0B
+0L
+0O
+0Y
+0\
+0e
+0i
+0r
+0v
+0!"
+0%"
+0."
+1"
 #30
-b10000 !
-1%
-b1000 $
-b111 #
+1g
+1t
+1#"
+10"
+0`
+0m
+0z
+0)"
+0+
+03
+08
+0@
+0E
+0M
+0R
+0Z
+1_
+1l
+1y
+1("
+1,
+19
+1F
+1S
+0c
+0p
+0}
+0,"
+00
+0.
+0=
+0;
+0J
+0H
+0W
+0U
+1d
+1q
+1~
+1-"
+1(
+12
+15
+1?
+1B
+1L
+1O
+1Y
+1\
+1e
+1i
+1r
+1v
+1!"
+1%"
+1."
+1)
+16
+1C
+1P
+0]
+0j
+0w
+0&"
+0"
+b1111 #
+b1111 $
+#35
+0*
+07
+0D
+0Q
+0a
+0n
+0{
+0*"
+1.
+1-
+1;
+1:
+1H
+1G
+1U
+b1111 !
+b1111 %
+1T
+1c
+1^
+1p
+1k
+1}
+1x
+1,"
+1'"
+0(
+01
+05
+0>
+0B
+0K
+0O
+0X
+0\
+0f
+0i
+0s
+0v
+0""
+0%"
+0/"
+1"
 #40
+0_
+0g
+0l
+0t
+0y
+0#"
+0("
+00"
+1`
+1m
+1z
+1)"
+0.
+0;
+0H
+0U
+0d
+0b
+0q
+0o
+0~
+0|
+0-"
+0+"
+1(
+11
+15
+1>
+1B
+1K
+1O
+1X
+1\
+1f
+1i
+1s
+1v
+1""
+1%"
+1/"
+1]
+1j
+1w
+1&"
+0"
+b11111111 #
+b11111111 $
+#45
+0^
+0k
+0x
+0'"
+1.
+1;
+1H
+1U
+1b
+1a
+1o
+1n
+1|
+1{
+1+"
+b11111111 !
+b11111111 %
+1*"
+0(
+01
+05
+0>
+0B
+0K
+0O
+0X
+0\
+0e
+0i
+0r
+0v
+0!"
+0%"
+0."
+1"
+#50
+0.
+0;
+0H
+0U
+0b
+0o
+0|
+0+"
+1(
+11
+15
+1>
+1B
+1K
+1O
+1X
+1\
+1e
+1i
+1r
+1v
+1!"
+1%"
+1."
+0"
