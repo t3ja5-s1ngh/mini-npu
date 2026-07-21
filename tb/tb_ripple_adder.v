@@ -1,45 +1,46 @@
-module tb_ripple_adder ;
+module tb_ripple_adder;
 
-initial begin 
-$dumpfile("wave.vcd");
-$dumpvars(1,tb_ripple_adder);
-end
+reg  [7:0] a;
+reg  [7:0] b;
+reg        cin;
 
-reg [7:0] a,b;
-reg cin;
 wire [7:0] sum;
-wire cout;
+wire       cout;
 
-ripple_adder dut (
-.a(a),
-.b(b),
-.cin(cin),
-.sum(sum),
-.cout(cout)
+ripple_adder #(8) dut (
+    .a(a),
+    .b(b),
+    .cin(cin),
+    .sum(sum),
+    .cout(cout)
 );
 
-integer i;
+initial begin
 
-initial begin 
+    $dumpfile("wave.vcd");
+    $dumpvars(0, tb_ripple_adder);
 
-    a = 5;
-    b = 3;
-    cin = 0;
+    $monitor(
+        "t=%0t a=%d b=%d cin=%b sum=%d cout=%b",
+        $time, a, b, cin, sum, cout
+    );
+
+    a = 0;   b = 0;   cin = 0;
     #10;
 
-    a = 255;
-    b = 1;
-    cin = 0;
+    a = 5;   b = 3;   cin = 0;
     #10;
 
-    a = 100;
-    b = 50;
-    cin = 0;
+    a = 10;  b = 15;  cin = 0;
     #10;
 
-    a = 7;
-    b = 8;
-    cin = 1;
+    a = 255; b = 1;   cin = 0;
+    #10;
+
+    a = 255; b = 255; cin = 0;
+    #10;
+
+    a = 20;  b = 30;  cin = 1;
     #10;
 
     $finish;

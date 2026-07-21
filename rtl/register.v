@@ -1,6 +1,7 @@
 module register #(
     parameter width = 8 )(
     input clk,
+    input rst,
     input [width-1:0] d,
     output [width-1:0] q
 );
@@ -12,6 +13,7 @@ generate
     begin 
         dff flipflop (
             .clk(clk),
+            .rst(rst),
             .d(d[i]),
             .q(q[i])
             );

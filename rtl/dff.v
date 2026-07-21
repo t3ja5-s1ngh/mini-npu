@@ -19,17 +19,21 @@ endmodule
 module dff (
 input d,
 input clk,
+input rst,
 output q,
 output q_n
 );
 
 wire clk_n;
 wire q1,q2;
+wire rst1,rst2;
 
 not (clk_n,clk);
+not (rst1,rst);
+and (rst2,d,rst1);
 
 dlatch master (
-.d(d),
+.d(rst2),
 .clk(clk_n),
 .q(q1),
 .q_n(q2)
